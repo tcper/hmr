@@ -6,6 +6,8 @@ import Layout from './Layout';
 import Features from './Features';
 import Profile from './Profile';
 
+import MobxClass from './MobxClass'
+
 const Home = () => {
   return (
     <Layout>
@@ -20,6 +22,8 @@ const Home = () => {
           </Grid.Column>
         </Grid.Row>
       </Grid>
+
+      <MobxClass />
     </Layout>
   );
 };

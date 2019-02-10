@@ -1,6 +1,8 @@
 import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import importedComponent from 'react-imported-component';
+import { Provider } from 'mobx-react';
+import stores from '../models';
 
 import Home from './Home';
 import Loading from './Loading';
@@ -20,6 +22,7 @@ const AsyncNoMatch = importedComponent(
 
 const App = () => {
   return (
+    <Provider {...stores}>
     <Router>
       <div>
         <Switch>
@@ -29,6 +32,7 @@ const App = () => {
         </Switch>
       </div>
     </Router>
+    </Provider>
   );
 };
 
